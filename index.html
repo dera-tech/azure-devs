@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azure Developers - Professional Web Development Agency</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet"> 
+
+
+  
+    
+</head>
+<body>
+    <img src="hero-bg.jpg" class="hero-bg" alt="Hero background">
+    
+    <!-- Hero Section -->
+    <div class="hero-content">
+        <h2 class="web">WEB DEVELOPMENT AGENCY</h2>
+        <h1>
+           <span class="Azure">Azure</span> <br><span class="Developers">Developers</span> 
+        </h1>
+        <p>Crafting beautiful, high-performance websites that help your business grow</p>
+        <nav class="hero-nav">
+            <button class="primary-btn" onclick="document.getElementById('start-your-project').scrollIntoView({behavior: 'smooth'})">
+                Start your project <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="secondary-btn" onclick="document.getElementById('our-services').scrollIntoView({behavior: 'smooth'})">
+                Our services
+            </button>
+        </nav>
+    </div>
+
+    <!-- Services Section -->
+    <section id="our-services" class="our-services">
+        <h3>What do we do</h3>
+        <p>Comprehensive web solutions tailored to your needs</p>
+        
+        <div class="services-grid">
+            <div class="service-card Web-Development">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2>Web Development</h2>
+                <p>Custom websites and web applications built with modern technologies for optimal performance.</p>
+            </div>
+
+            <div class="service-card UI-UX-Design">
+                <div class="service-icon">
+                    <i class="fas fa-question"></i>
+                </div>
+                <h2>UI/UX Design</h2>
+                <p>Beautiful, intuitive designs that create engaging user experiences and drive conversions.</p>
+            </div>
+
+            <div class="service-card Performance-Optimization">
+                <div class="service-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2>Performance Optimization</h2>
+                <p>Lightning-fast loading times and seamless interactions that keep visitors engaged.</p>
+            </div>
+
+            <div class="service-card Maintenance-Support">
+                <div class="service-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h2>Maintenance & Support</h2>
+                <p>Ongoing support and updates to keep your website running smoothly and securely.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-us">
+        <h3>About Us</h3>
+        <h2>Building digital experiences that matter</h2>
+        <p>At Azure Developers, we're passionate about creating exceptional web experiences. Our team combines creative design with technical expertise to deliver websites that not only look great but perform exceptionally.</p>
+        <ul>
+            <li>Modern, responsive designs</li>
+            <li>Clean, maintainable code</li>
+            <li>SEO-optimized websites</li>
+            <li>Fast turnaround times</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="start-your-project" class="start-your-project">
+    <h2>Get In Touch</h2>
+    <h3>Ready to start your project? Let's talk!</h3>
+    <div class="form-container">
+        <h3>Send us a message</h3>
+        <p>Fill out the form below and we'll respond within 24 hours</p>
+        <form action="https://formspree.io/f/mdkwlepd" method="POST" id="contact-form">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="your@email.com" required>
+            <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+            <button type="submit">
+                <i class="fas fa-envelope"></i>
+                Send message
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <h2>Azure Developers</h2>
+        <p>&copy; 2025 Azure Developers. Crafting digital experiences.</p>
+    </footer>
+</body>
+</html>
+<script  src="script.js"></script>

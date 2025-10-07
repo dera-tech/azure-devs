@@ -1,0 +1,434 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    background: white;
+     }
+/* Hero Section */
+.hero-bg {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.8); /* Slightly brighter to enhance visibility through overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #333;
+    padding: 0 2rem;
+    background: rgba(255, 255, 255, 0.7); /* Reduced opacity for more image visibility */
+    /* Standard backdrop-filter with prefix for Safari/WebKit */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+/* Graceful fallback for unsupported browsers */
+@supports not (backdrop-filter: blur(5px)) {
+    .hero-content {
+        background: rgba(255, 255, 255, 0.75); /* Adjusted fallback opacity */
+    }
+}
+.hero-content h2 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.web {
+  color: #1c83f2;
+  font-size: small;
+  font-weight: lighter;
+  font-style: normal;
+  font-family: sans-serif;
+}
+.Azure {
+    color: #1c83f2; /* Azure blue */
+    display: inline;
+    font-weight: 700;
+}
+
+.Developers {
+    color: #1c83f2;
+    display: inline;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+/* Hero Navigation Buttons */
+.hero-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.hero-nav button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-nav .primary-btn {
+    background: #007BFF;
+    color: white;
+}
+
+.hero-nav .primary-btn:hover {
+    background: #0056b3;
+}
+
+.hero-nav .secondary-btn {
+    background: transparent;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+}
+
+.hero-nav .secondary-btn:hover {
+    background: #007BFF;
+    color: white;
+}
+
+/* Services Section */
+#our-services {
+    padding: 100px 2rem;
+    background: white;
+    text-align: center;
+}
+
+#our-services h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#our-services > p {
+    font-size: 1.125rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    border-color: #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    text-align: left;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
+    border-color: #007BFF;
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: #007BFF;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+}
+
+.service-card h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.service-card p {
+    color: #555;
+    text-align: center;
+}
+
+/* About Section */
+#about {
+    padding: 100px 2rem;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+#about h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007BFF;
+    margin-bottom: 2rem;
+}
+
+#about p {
+    font-size: 1.125rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #666;
+}
+
+#about ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#about li {
+    font-size: 1.125rem;
+    color: #555;
+    padding-left: 2rem;
+    position: relative;
+    flex: 1 1 200px;
+    text-align: left;
+}
+
+#about li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Contact Section */
+#start-your-project {
+    padding: 100px 2rem;
+    background: white;
+    text-align: center;
+}
+
+#start-your-project h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#start-your-project h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-container h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-container p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 1rem;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    background: #f7f7f7;
+    color: #333;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #007BFF;
+}
+
+footer p {
+    color: #ccc;
+}
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem); /* Fluid scaling */
+    }
+    
+    .Developers {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    #our-services, #about, #start-your-project {
+        padding: 80px 1.5rem; /* Tighter padding on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 0 1rem;
+        height: 100vh; /* Keep full height */
+    }
+    
+    .hero-content h1 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+    
+    .Developers {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .sidebar {
+        display: none; /* Already there */
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    #about ul {
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 100%;
+    }
+    
+    .form-container {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+    
+    #our-services, #about, #start-your-project {
+        padding: 60px 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 1rem;
+    }
+    
+    .hero-nav button { /* If using buttons instead of sidebar */
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    footer {
+        padding: 1.5rem 1rem;
+    }
+}
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
